@@ -1,0 +1,17 @@
+<!-- 
+    Author: Muhammad Sallar Bin Aamir
+    Date: 03/03/2023
+-->
+{% extends "base.html" %}
+
+
+{% block main %}
+    <h2>Classification Result:</h2>
+    <p>The review is {{ prediction }}</p>
+    <h2>Performance Metrics:</h2>
+    <p>Accuracy: {{ accuracy }}</p>
+    <p>Precision: {{ precision }}</p>
+    <p>Recall: {{ recall }}</p>
+    <br>
+    <a href="/">Back to Home</a>
+{% endblock %}

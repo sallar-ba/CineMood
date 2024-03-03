@@ -2,12 +2,25 @@
     Author: Muhammad Sallar Bin Aamir
     Date: 03/03/2023
 -->
+
 {% extends "base.html" %}
 
 
+{% block stylesheet %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    
+{% endblock %}
+
 {% block main %}
-    <div class="container">
-        <h1>Welcome to CineMood</h1>
-        <p>Where you can find the best movies and TV shows</p>
-    </div>
+    <h1>Movie Review Sentiment Analyzer</h1>
+    <p>Welcome to the Movie Review Sentiment Analyzer!</p>
+    <p>Enter your movie review in the text area below, and we'll analyze its sentiment to determine whether it's positive or negative.</p>
+    <p>Our system uses advanced natural language processing techniques to understand the sentiment expressed in your review.</p>
+    <p>Feel free to submit your review and see the analysis results!</p>
+    <form action="/classify" method="post">
+        <label for="review">Enter your movie review:</label><br>
+        <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review here..."></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}
