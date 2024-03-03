@@ -1,0 +1,35 @@
+<!-- 
+    Author: Muhammad Sallar Bin Aamir
+    Date: 03/03/2024
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}" type="image/x-icon">
+
+
+
+    {% block stylesheet %}
+    
+    {% endblock %}
+
+
+    <title>
+    {% block title %}
+    CineMood
+    {% endblock %}
+    </title>
+
+
+</head>
+<body>
+
+    {% block main %}
+
+    {% endblock %}
+    
+</body>
+</html>
